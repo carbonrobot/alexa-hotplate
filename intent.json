@@ -1,0 +1,33 @@
+{
+    "intents": [
+        {
+            "intent": "RecipeSearch",
+            "slots": [
+                {
+                    "name": "INGONE",
+                    "type": "LIST_OF_INGREDIENTS"
+                },
+                {
+                    "name": "INGTWO",
+                    "type": "LIST_OF_INGREDIENTS"
+                },
+                {
+                    "name": "INGTHREE",
+                    "type": "LIST_OF_INGREDIENTS"
+                }
+            ]
+        },
+        {
+            "intent": "Done"
+        },
+        {
+            "intent": "AMAZON.HelpIntent"
+        },
+        {
+            "intent": "AMAZON.CancelIntent"
+        },
+        {
+            "intent": "AMAZON.StopIntent"
+        }
+    ]
+}

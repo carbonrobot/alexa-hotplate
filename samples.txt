@@ -1,0 +1,12 @@
+RecipeSearch ask hotplate for recipes
+RecipeSearch ask hotplate for recipes with {INGONE}
+RecipeSearch ask hotplate for recipes with {INGONE} and {INGTWO}
+RecipeSearch ask hotplate for recipes with {INGONE} {INGTWO} and {INGTHREE}
+RecipeSearch ask hotplate for recipes containing {INGONE}
+RecipeSearch ask hotplate for recipes containing {INGONE} and {INGTWO}
+RecipeSearch ask hotplate for recipes containing {INGONE} {INGTWO} and {INGTHREE}
+RecipeSearch ask hotplate for recipes that have {INGONE}
+RecipeSearch ask hotplate for recipes that have {INGONE} and {INGTWO}
+RecipeSearch ask hotplate for recipes that have {INGONE} {INGTWO} and {INGTHREE}
+RecipeSearch {INGONE}
+Done done
