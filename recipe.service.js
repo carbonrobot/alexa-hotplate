@@ -15,7 +15,9 @@ const API = {
  * Initialize an instance of the recipe service
  * @param api A string name of the api to use. Possible options are "RECIPE_PUPPY"
  */
-function recipeService(api) {
+function recipeService(apikey) {
+
+    const api = API[apikey];
 
     return {
         // search using the api and return the mapped results
