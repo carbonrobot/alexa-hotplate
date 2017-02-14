@@ -6,14 +6,14 @@ const request = require('request-promise');
 const API = {
     RECIPE_PUPPY: {
         uri: params => { return 'http://www.recipepuppy.com/api/?i={0}'.replace('{0}', params); },
-        map: recipe => { return { title: recipe.title, href: recipe.href }; },
+        map: response => { return response.results.map(recipe => { return { title: recipe.title, href: recipe.href }; }); },
         count: response => { return response.results.length; }
     }
 };
 
 /**
  * Initialize an instance of the recipe service
- * @param api A string name of the api to use. Possible options are "RECIPE_PUPPY"
+ * @param apikey A string name of the api to use. Possible options are "RECIPE_PUPPY"
  */
 function recipeService(apikey) {
 
@@ -29,7 +29,7 @@ function recipeService(apikey) {
             return request(options).then(response => {
                 return {
                     count: api.count(response),
-                    recipes: response.results.map(api.map)
+                    recipes: api.map(response)
                 };
             });
         },

@@ -81,11 +81,11 @@ function recipeSearch() {
         .then(response => {
 
             if (response.count > 0) {
-                this.emit(':tell', SAY.NO_RESULTS);
-                this.attributes['keys'] = '';
+                this.emit(':ask', SAY.RESULTS.replace('{0}', response.count));
             }
             else {
-                this.emit(':ask', SAY.RESULTS.replace('{0}', response.count));
+                this.emit(':tell', SAY.NO_RESULTS);
+                this.attributes['keys'] = '';
             }
 
         }).catch(err => {
